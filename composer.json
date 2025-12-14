@@ -1,0 +1,24 @@
+{
+    "name": "patrykmolenda/netpolicy-php",
+    "description": "Netpolicy PHP",
+    "type": "library",
+    "license": "MIT",
+    "autoload": {
+        "psr-4": {
+            "PatrykMolenda\\NetPolicy\\": "src/",
+            "PatrykMolenda\\NetPolicy\\Tests\\": "tests/"
+        }
+    },
+    "authors": [
+        {
+            "name": "PatrykMolenda",
+            "email": "kontakt@patrykmolenda.pl"
+        }
+    ],
+    "require-dev": {
+        "phpunit/phpunit": "^11.5"
+    },
+    "scripts": {
+        "test": "phpunit --colors=always"
+    }
+}

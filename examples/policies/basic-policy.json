@@ -1,0 +1,39 @@
+{
+    "policies": [
+        {
+            "name": "customer-traffic",
+            "priority": 10,
+            "rules": [
+                {
+                    "match": {
+                        "prefix": "192.168.0.0\/16",
+                        "protocol": "BGP",
+                        "direction": "in"
+                    },
+                    "action": {
+                        "type": "accept",
+                        "attributes": {
+                            "local-pref": 150,
+                            "community": "100:200"
+                        }
+                    }
+                }
+            ]
+        },
+        {
+            "name": "ospf-traffic",
+            "priority": 20,
+            "rules": [
+                {
+                    "match": {
+                        "protocol": "OSPF",
+                        "direction": "any"
+                    },
+                    "action": {
+                        "type": "accept"
+                    }
+                }
+            ]
+        }
+    ]
+}
